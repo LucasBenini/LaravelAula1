@@ -23,4 +23,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('paramaiusculo/{palavra}','StringsController@paraMaiusculoFormatada');
+Route::get('paramaiusculo/{palavra}','StringsController@paraMaiusculo');
+
+
+Route::get('paramaiusculoformatada/{palavra}','StringsController@paraMaiusculoFormatada');
+
+
+Route::get('paracaractere/{palavra}','StringsController@paraArray');

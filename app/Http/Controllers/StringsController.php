@@ -15,4 +15,20 @@ class StringsController extends Controller
     	$modificada = strtoupper($original);
     	return view("exibirMaiusculo",["original" => $original, "modificada" => $modificada]);
     }
+
+    public function paraArray($original){
+    	$vetor = explode(" ",strtoupper($original));
+    	return view("exibirPalavras",[ "original" => $original, "vetor" => $vetor ]);
+    }
+
+    /*
+    Outros métodos para manipulação de string:
+	ucwords -> Retorna a string fornecida com todas as palavras iniciadas por letras maiúsculas
+	strtolower -> Retorna a string fornecida com todas as letras maiúsculas.
+	strtolower -> Retorna a string fornecida com todas as letras minúsculas.
+	strrev -> Retorna a string fornecida invertida.
+	shuffle -> Esta função “embaralha” o array, ou seja, troca as posições dos elementos aleatoriamente e não retorna valor algum.
+	sort -> ordena o vetor de forma crescente
+	rsort -> ordena o vetor de forma decrescente 
+	*/
 }
